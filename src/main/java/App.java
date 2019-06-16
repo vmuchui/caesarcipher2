@@ -46,7 +46,7 @@ public class App {
                     }
                 }
             }else{
-                System.out.println("Sorry your input is not recognised!! Please enter a number either 1, 2 or 3");
+                System.out.println("Sorry your input is not recognised!! Please enter either 1, 2 or 3");
             }
         }
     }
