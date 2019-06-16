@@ -11,7 +11,7 @@ public class App {
             if (inputChoice.equals("1")) {
                 System.out.println("Enter the word you would like to encrypt: ");
                 String inputtedName = myConsole.readLine();
-                System.out.println("Enter the key you would like to use for your encryption!");
+                System.out.println("Enter a number to use as the key for your encryption!");
                 int inputtedKey = Integer.parseInt(myConsole.readLine());
                 CaesarCipher createdCaesarCipher = new CaesarCipher(inputtedName, inputtedKey);
                 String encrypted = createdCaesarCipher.encrypt();
@@ -21,7 +21,7 @@ public class App {
             }else if (inputChoice.equals("2")) {
                 System.out.println("Enter the word you would like to decrypt: ");
                 String inputtedName = myConsole.readLine();
-                System.out.println("Enter the key to use for your decryption!");
+                System.out.println("Enter the key for your decryption!");
                 int inputtedKey = Integer.parseInt(myConsole.readLine());
                 CaesarCipher createdCaesarCipher = new CaesarCipher(inputtedName, inputtedKey);
                 String decrypted = createdCaesarCipher.decrypt();
