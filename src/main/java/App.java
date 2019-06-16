@@ -6,7 +6,7 @@ public class App {
         System.out.println("Welcome To Caesar-Cipher :-)");
         while (programRunning) {
             System.out.println("Would you like to : 1.encrypt, 2.decrypt 3. Exit");
-            System.out.println("Choose either 1, 2 or 3");
+            System.out.println("Choose either '1', '2' or '3' ");
             String inputChoice = myConsole.readLine();
             if (inputChoice.equals("1")) {
                 System.out.println("Enter the word you would like to encrypt: ");
@@ -29,8 +29,23 @@ public class App {
                 System.out.println(decrypted);
                 System.out.println("-------------------");
             }else if (inputChoice.equals("3")) {
-                programRunning = false;
-            }else {
+                System.out.println("Are you sure you want to exit?");
+                System.out.println("Choose either 1 or 2: 1.Yes 2.No");
+                String exitChoice = myConsole.readLine();
+                if (exitChoice.equals("1")) {
+                    programRunning = false;
+                } else if (exitChoice.equals("2")) {
+                    programRunning = true;
+                } else {
+                    System.out.println("Please enter a valid choice either '1' or '2'");
+                    exitChoice = myConsole.readLine();
+                    if (exitChoice.equals("1")) {
+                        programRunning = false;
+                    } else if (exitChoice.equals("2")) {
+                        programRunning = true;
+                    }
+                }
+            }else{
                 System.out.println("Sorry your input is not recognised!! Please enter a number either 1, 2 or 3");
             }
         }
